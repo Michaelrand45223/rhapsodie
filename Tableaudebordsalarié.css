@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(252, 203, 197);
+}
+
+#logo {
+    width: 100px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+div a {
+
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    background-color: #fdfdfda2;
+    color: #000000;
+    border-radius: 500px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+
+}

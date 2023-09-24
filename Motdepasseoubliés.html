@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mot de passe oublié</title>
+    <link rel="stylesheet" href="Motdepasseoubliés.css">
+    <script>
+        // Fonction pour valider l'adresse email
+        function validateEmail(email) {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+
+        // Fonction pour gérer la soumission du formulaire
+        function handleSubmit() {
+            var email = document.getElementById("email").value;
+
+            if (!validateEmail(email)) {
+                alert("Veuillez entrer une adresse e-mail valide.");
+                return false;
+            }
+
+            // Envoyer la requête pour réinitialiser le mot de passe (à implémenter)
+            alert("Un e-mail de réinitialisation de mot de passe a été envoyé à " + email);
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <img src="Image/logo.jpg.png" alt="Logo de Rhapsodie CRA" class="logo">
+
+    </div>
+
+    <h2>Mot de passe oublié</h2>
+
+    <div class="container">
+        <form onsubmit="return handleSubmit();">
+            <label for="email"><b>Adresse e-mail</b></label>
+            <input type="text" id="email" placeholder="Entrez votre adresse e-mail" name="email" required>
+
+            <button type="submit">Réinitialiser le mot de passe</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

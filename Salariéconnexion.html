@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion des salariés</title>
+    <link rel="stylesheet" href="Salariéconnexion.css">
+</head>
+
+<body>
+    <header class="header">
+        <img src="Image/logo.jpg.png" alt="Logo de Rhapsodie CRA" class="logo">
+    </header>
+
+    <main>
+        <h1>Connexion des salariés</h1>
+
+        <form action="/connect" method="post" class="form">
+            <div class="form-group">
+                <label for="email">Adresse Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mot de passe:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <input type="submit" value="Connexion">
+        </form>
+
+        <nav class="footer-links">
+            <a href="Motdepasseoubliés.html">Mot de passe oublié?</a>
+            <a href="Créeruncompte.html">Créer un compte</a>
+        </nav>
+    </main>
+
+    <script src="Salariéconnexion.js"></script>
+</body>
+
+</html>
