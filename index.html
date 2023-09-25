@@ -18,7 +18,8 @@
 
         <!-- Titre de bienvenue -->
         <h2 class="welcome-message">Bienvenue chez Rhapsodie CRA</h2>
-
+        <button onclick="signUp('test@gmail.com', 'ahahahah')">INSCRIPTION</button>
+        <button onclick="signIn('test@gmail.com', 'ahahahah')">CONNEXION</button>
         <!-- Options de connexion -->
         <div class="options">
             <a href="Adminconnexion.html" class="option admin">Administrateur</a>
@@ -34,7 +35,27 @@
         <a href="contactez-nous.html" class="contactez-nous">Contactez-nous</a>
     </div>
 
-    <script src="index.js"></script>
+
 </body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyD5XUFZdpnniSJh7rfo8nJ-C6RopWTsNF0",
+        authDomain: "rhapsodie-25374.firebaseapp.com",
+        projectId: "rhapsodie-25374",
+        storageBucket: "rhapsodie-25374.appspot.com",
+        messagingSenderId: "339820898811",
+        appId: "1:339820898811:web:ad07ee153fbb5c5fe2435e"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+</script>
+<script type="module" src="index.js"></script>
 
 </html>
