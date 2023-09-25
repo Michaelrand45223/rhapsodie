@@ -5,6 +5,10 @@
     <meta charset="UTF-8"> <!-- Encodage -->
     <title>Créer un compte</title>
     <link rel="stylesheet" href="Créeruncompte.css">
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
+    <script src="./auth/auth.js"></script>
 </head>
 
 <body>
@@ -14,7 +18,7 @@
     </header>
 
     <main> <!-- Section principale -->
-        <form action="/create_account" method="post">
+        <div>
 
             <!-- Prénom -->
             <label for="prenom">Prénom:</label>
@@ -40,12 +44,12 @@
             <label for="password">Mot de passe:</label>
             <input type="password" id="password" name="password" required>
 
-            <input type="submit" value="Créer un compte">
-        </form>
+            <input type="submit" onClick="inscription()" value="Créer un compte">
+        </div>
     </main>
 
     <footer>
-        <a href="Salariéconnexion.html">J'ai déjà un compte</a>
+        <a href="salarie-connexion.html">J'ai déjà un compte</a>
     </footer>
 
     <!-- JavaScript -->

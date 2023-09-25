@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Connexion des salariés</title>
-    <link rel="stylesheet" href="Salariéconnexion.css">
+    <link rel="stylesheet" href="salarie-connexion.css">
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
+    <script src="./auth/auth.js"></script>
 </head>
 
 <body>
@@ -14,8 +18,7 @@
 
     <main>
         <h1>Connexion des salariés</h1>
-
-        <form action="/connect" method="post" class="form">
+        <div class="form">
             <div class="form-group">
                 <label for="email">Adresse Email:</label>
                 <input type="email" id="email" name="email" required>
@@ -26,8 +29,8 @@
                 <input type="password" id="password" name="password" required>
             </div>
 
-            <input type="submit" value="Connexion">
-        </form>
+            <input type="submit" onclick="login()" value="Connexion">
+        </div>
 
         <nav class="footer-links">
             <a href="Motdepasseoubliés.html">Mot de passe oublié?</a>
@@ -35,7 +38,7 @@
         </nav>
     </main>
 
-    <script src="Salariéconnexion.js"></script>
+    <script src="salarie-connexion.js"></script>
 </body>
 
 </html>
