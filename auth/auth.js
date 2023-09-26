@@ -12,6 +12,8 @@ const app = firebase.initializeApp(firebaseConfig);
 
 
 const auth = app.auth()
+const db = firebase.firestore();
+
 
 // Gestion de l'inscription d'un utilisateur
 function signUp(email, password) {
@@ -36,14 +38,17 @@ function signIn(email, password) {
         .then((userCredential) => {
             // L'utilisateur est connecté avec succès
             var user = userCredential.user;
-            // Faites quelque chose avec l'utilisateur, par exemple, redirigez-le vers une page sécurisée.
+            // Redirigez l'utilisateur vers la page salarié.html
+            window.location.href = "Salarié.html";
         })
         .catch((error) => {
             // Gestion des erreurs de connexion
             var errorCode = error.code;
             var errorMessage = error.message;
+            console.error("Erreur de connexion:", errorMessage);
         });
 }
+
 
 // Gestion de la déconnexion de l'utilisateur
 function signOut() {
@@ -59,6 +64,10 @@ const inscription = (e) => {
 
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
+    const nom = document.getElementById("nom").value;
+    const prenom = document.getElementById("prenom").value;
+    const responsable = document.getElementById("responsable").value;
+    const site = document.getElementById("site").value;
 
     console.log({ email, password });
     if (password.length < 6) {
@@ -66,7 +75,27 @@ const inscription = (e) => {
     }
     // TODO: chercher un validateur email regexp
     else {
-        signUp(email, password);
+        try {
+            signUp(email, password);
+
+            db.collection("users").add({
+                name: nom,
+                firstname: prenom,
+                email: email,
+                responsable: responsable,
+                site: site
+            })
+                .then((docRef) => {
+                    console.log("Document written with ID: ", docRef.id);
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                });
+        }
+
+        catch (e) {
+            console.log(e)
+        }
     }
 };
 
