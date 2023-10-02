@@ -1,3 +1,95 @@
+/* Reset de quelques propriétés par défaut des navigateurs */
+body,
+h1,
+form,
+label,
+input,
+a {
+    margin: 0;
+    padding: 0;
+}
+
+/* Applique un fond et un espacement global */
 body {
-    background-color: rgb(253, 204, 190);
+    font-family: Arial, sans-serif;
+    background-color: #fabebe;
+    margin: 20px;
+}
+
+/* Style pour l'en-tête */
+.header {
+    background-color: #333;
+    color: rgb(246, 188, 188);
+    text-align: center;
+    padding: 10px;
+}
+
+.logo {
+    width: 100px;
+}
+
+/* Style pour le titre */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Style général pour le formulaire */
+.form {
+    background-color: #f9f3f3;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Style pour les champs de formulaire */
+.form-group {
+    margin-bottom: 16px;
+}
+
+/* Style pour les labels et les champs de saisie */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 8px;
+    border: 1px solid #f1b8b8;
+    border-radius: 4px;
+}
+
+/* Style pour le bouton de connexion */
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style pour les liens */
+.footer-links a {
+    display: inline-block;
+    margin: 10px 0;
+    color: #007bff;
+    margin-left: 300px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
 }
