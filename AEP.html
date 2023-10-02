@@ -1,38 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BNPPARIBAS</title>
+    <title>Connexion des salariés</title>
     <link rel="stylesheet" href="AEP.css">
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
+    <script src="./auth/auth.js"></script>
 </head>
 
 <body>
-    <div class="container">
+    <header class="header">
+        <img src="Image/logo.jpg.png" alt="Logo de Rhapsodie CRA" class="logo">
+    </header>
 
-        <div class="header">
-            <img src="Image/logo.jpg.png" alt="Logo de Rhapsodie CRA" class="logo">
+    <main>
+        <h1>Espace de Connexion des Responsables</h1>
+        <div class="form">
+            <div class="form-group">
+                <label for="email">Adresse Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mot de passe:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <input type="submit" onclick="login()" value="Connexion">
         </div>
 
-        <h2 class="company">AEP</h2>
+        <nav class="footer-links">
+            <a href="Motdepasseoubliés.html">Mot de passe oublié?</a>
+            <a href="Créeruncompte.html">Créer un compte</a>
+        </nav>
+    </main>
 
-        <table>
-            <tr>
-                <th>Indicateur</th>
-            </tr>
-            <tr>
-                <th>Date</th>
-                <td>Jour travaillé</td>
-                <td>Maria Anders</td>
-                <td>Germany</td>
-            </tr>
-            <tr>
-                <td>Centro comercial Moctezuma</td>
-                <td>Francisco Chang</td>
-                <td>Mexico</td>
-            </tr>
+    <script src="AEP.js"></script>
 </body>
-<script src="AEP.js"></script>
 
 </html>
