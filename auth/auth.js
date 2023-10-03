@@ -38,8 +38,27 @@ function signIn(email, password) {
         .then((userCredential) => {
             // L'utilisateur est connecté avec succès
             var user = userCredential.user;
-            // Redirigez l'utilisateur vers la page salarié.html
-            window.location.href = "Salarié.html";
+
+            // Vérifier le rôle de l'utilisateur à partir de la base de données
+            db.collection("users").where("email", "==", email).get()
+                .then((querySnapshot) => {
+                    querySnapshot.forEach((doc) => {
+                        const userRole = doc.data().role;
+                        // Rediriger en fonction du rôle
+                        if (userRole === "Salarié") {
+                            window.location.href = "Salarié.html";
+                        } else if (userRole === "Administrateur") {
+                            window.location.href = "Administrateur.html";
+                        } else if (userRole === "Responsable") {
+                            window.location.href = "Responsable.html";
+                        } else {
+                            console.error("Rôle non reconnu: ", userRole);
+                        }
+                    });
+                })
+                .catch((error) => {
+                    console.error("Erreur lors de la récupération du rôle: ", error);
+                });
         })
         .catch((error) => {
             // Gestion des erreurs de connexion
@@ -48,7 +67,6 @@ function signIn(email, password) {
             console.error("Erreur de connexion:", errorMessage);
         });
 }
-
 
 // Gestion de la déconnexion de l'utilisateur
 function signOut() {
