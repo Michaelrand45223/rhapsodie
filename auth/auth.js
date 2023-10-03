@@ -17,19 +17,34 @@ const db = firebase.firestore();
 
 // Gestion de l'inscription d'un utilisateur
 function signUp(email, password) {
-    console.log("inscription")
-    auth.createUserWithEmailAndPassword(email, password)
-        .then((userCredential) => {
-            // L'utilisateur est inscrit avec succès
-            var user = userCredential.user;
-            // Faites quelque chose avec l'utilisateur, par exemple, redirigez-le vers une page sécurisée.
+    console.log("inscription");
+
+    // Vérifiez d'abord si l'adresse e-mail existe déjà
+    auth.fetchSignInMethodsForEmail(email)
+        .then((signInMethods) => {
+            if (signInMethods && signInMethods.length > 0) {
+                // L'adresse e-mail est déjà utilisée par un compte
+                alert("Cette adresse e-mail est déjà associée à un compte.");
+            } else {
+                // L'adresse e-mail n'est pas encore utilisée, vous pouvez procéder à l'inscription
+                auth.createUserWithEmailAndPassword(email, password)
+                    .then((userCredential) => {
+                        // L'utilisateur est inscrit avec succès
+                        var user = userCredential.user;
+                        // Faites quelque chose avec l'utilisateur, par exemple, redirigez-le vers une page sécurisée.
+                    })
+                    .catch((error) => {
+                        // Gestion des erreurs d'inscription
+                        var errorCode = error.code;
+                        var errorMessage = error.message;
+                    });
+            }
         })
         .catch((error) => {
-            // Gestion des erreurs d'inscription
-            var errorCode = error.code;
-            var errorMessage = error.message;
+            console.error("Erreur lors de la vérification de l'adresse e-mail: ", error);
         });
 }
+
 
 // Gestion de la connexion d'un utilisateur
 function signIn(email, password) {
