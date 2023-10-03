@@ -1,32 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
-    <title>Connexion</title>
-    <link rel="stylesheet" type="text/css" href="Adminconnexion.css">
+    <meta charset="UTF-8">
+    <title>Page de l'administrateur</title>
+    <!-- Ajoutez les liens vers les fichiers CSS et JavaScript nécessaires si vous en avez -->
 </head>
 
 <body>
-    <div class="logo">
-        <img src="Image/logo.jpg.png" alt="Logo">
-    </div>
-    <div class="container">
-        <h2>Connexion</h2>
-        <form id="login-form">
-            <div class="input-group">
-                <label for="email">Adresse e-mail</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="input-group">
-                <label for="password">Mot de passe</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="input-group">
-                <button type="submit">Se connecter</button>
-            </div>
-        </form>
-    </div>
-    <script src="Adminconnexion.js"></script>
+    <header class="header">
+        <!-- Ajoutez le logo ou le contenu de l'en-tête selon vos besoins -->
+    </header>
+
+    <main>
+        <h1>Informations de l'administrateur</h1>
+        <div class="admin-info">
+            <p><strong>Prénom:</strong> <span id="admin-firstname"></span></p>
+            <p><strong>Nom:</strong> <span id="admin-lastname"></span></p>
+            <p><strong>Fonction:</strong> <span id="admin-role"></span></p>
+            <p><strong>Site d'intervention:</strong> <span id="admin-site"></span></p>
+        </div>
+    </main>
+
+    <!-- Ajoutez d'autres éléments de votre page si nécessaire -->
+
+    <script src="Administrateur.js"></script>
 </body>
 
 </html>
