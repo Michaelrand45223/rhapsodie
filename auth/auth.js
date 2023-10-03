@@ -37,6 +37,7 @@ function signUp(email, password) {
                         // Gestion des erreurs d'inscription
                         var errorCode = error.code;
                         var errorMessage = error.message;
+                        alert("Erreur d'inscription : " + errorMessage);
                     });
             }
         })
@@ -79,6 +80,7 @@ function signIn(email, password) {
             // Gestion des erreurs de connexion
             var errorCode = error.code;
             var errorMessage = error.message;
+             alert("Erreur de connexion : " + errorMessage);
             console.error("Erreur de connexion:", errorMessage);
         });
 }
