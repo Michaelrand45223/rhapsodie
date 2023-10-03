@@ -2,7 +2,7 @@
    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
-    <script>
+    // Pour récuperer les informations
         const firebaseConfig = {
             apiKey: "AIzaSyD5XUFZdpnniSJh7rfo8nJ-C6RopWTsNF0",
     authDomain: "rhapsodie-25374.firebaseapp.com",
@@ -43,4 +43,4 @@
                 window.location.href = "connexion.html"; // 
             }
         });
-    </script>
+    
