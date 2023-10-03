@@ -64,7 +64,7 @@ function signIn(email, password) {
                         if (userRole === "Salarié") {
                             window.location.href = "Salarié.html";
                         } else if (userRole === "Administrateur") {
-                            window.location.href = "Administrateur.html";
+                            window.location.href = "administrateur.html";
                         } else if (userRole === "Responsable") {
                             window.location.href = "Responsable.html";
                         } else {
