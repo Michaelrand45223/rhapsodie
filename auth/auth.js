@@ -89,6 +89,7 @@ function signIn(email, password) {
 function signOut() {
     auth.signOut().then(() => {
         // L'utilisateur est déconnecté avec succès
+         window.location.href = "index.html";  // Redirige l'utilisateur vers la page de connexion
     }).catch((error) => {
         // Gestion des erreurs de déconnexion
     });
