@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,28 +8,40 @@
     <title>Espace Administrateur</title>
     <link rel="stylesheet" href="administrateur.css">
 </head>
+
 <body>
-    <h1>ESPACE ADMINISTRATEUR</h1>
+    <h1>Bienvenue dans l'Espace Administrateur</h1>
     <div id="userInfo">
         <p><strong>Prénom:</strong> <span id="firstName"></span></p>
         <p><strong>Nom:</strong> <span id="lastName"></span></p>
         <p><strong>Fonction:</strong> <span id="userRole"></span></p>
         <p><strong>Site d'Intervention:</strong> <span id="userSite"></span></p>
     </div>
- <!-- Script pour récupérer et afficher les informations de l'utilisateur -->
-   <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+    <div class="companies">
+        <div class="companyBox company1"><a href="AEP.html">AEP</a></div>
+        <div class="companyBox company2"><a href="SWISSLIFE.html">SWISSLIFE</a></div>
+        <div class="companyBox company3"><a href="AXA.html">AXA</a></div>
+        <div class="companyBox company4"><a href="BPCE.html">BPCE</a></div>
+        <div class="companyBox company5"><a href="CACIB.html">CACIB</a></div>
+        <div class="companyBox company6"><a href="CONNECT.html">CONNECT</a></div>
+        <div class="companyBox company7"><a href="NAXITIS.html">NAXITIS</a></div>
+        <div class="companyBox company8"><a href="SOCIETEGENERALE.html">SG</a></div>
+        <div class="companyBox company9"><a href="BNPPARIBAS.html">BNPPARIBAS</a></div>
+    </div>
+
+    <!-- Script pour récupérer et afficher les informations de l'utilisateur -->
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
-    
     <script>
         // Pour récuperer les informations
         const firebaseConfig = {
             apiKey: "AIzaSyD5XUFZdpnniSJh7rfo8nJ-C6RopWTsNF0",
-    authDomain: "rhapsodie-25374.firebaseapp.com",
-    projectId: "rhapsodie-25374",
-    storageBucket: "rhapsodie-25374.appspot.com",
-    messagingSenderId: "339820898811",
-    appId: "1:339820898811:web:ad07ee153fbb5c5fe2435e"
+            authDomain: "rhapsodie-25374.firebaseapp.com",
+            projectId: "rhapsodie-25374",
+            storageBucket: "rhapsodie-25374.appspot.com",
+            messagingSenderId: "339820898811",
+            appId: "1:339820898811:web:ad07ee153fbb5c5fe2435e"
         };
 
         firebase.initializeApp(firebaseConfig);
@@ -62,8 +75,8 @@
                 window.location.href = "connexion.html"; // 
             }
         });
-</script>
-   
+    </script>
+
 </body>
-  
+
 </html>
