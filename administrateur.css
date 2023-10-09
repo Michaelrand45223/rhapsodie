@@ -55,3 +55,63 @@ h1 {
 #loginLink:hover {
     text-decoration: underline;
 }
+
+/* Style pour les carrés des entreprises */
+.companyBox {
+    width: 100px;
+    height: 100px;
+    margin: 15px;
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #f8f5f5;
+    text-align: center;
+    line-height: 100px;
+    font-size: 14px;
+}
+
+/* Couleurs spécifiques pour chaque entreprise */
+.company1 {
+    background-color: #287927;
+}
+
+.company2 {
+    background-color: #FF6347;
+}
+
+.company3 {
+    background-color: #184fc4;
+}
+
+.company4 {
+    background-color: #fafbfc;
+}
+
+.company5 {
+    background-color: #066844;
+}
+
+.company6 {
+    background-color: #f8c33f;
+}
+
+.company7 {
+    background-color: #f8f7fa;
+}
+
+.company8 {
+    background-color: #5F9EA0;
+}
+
+.company9 {
+    background-color: #ffa8ff;
+}
+
+.company10 {
+    background-color: #5e8c02;
+}
+
+/* /enlever les surlignements */
+a {
+    text-decoration: none;
+    color: #333;
+}
