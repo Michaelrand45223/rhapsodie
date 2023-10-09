@@ -3,40 +3,79 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Connexion des salariés</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="AEP.css">
-    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
-    <script src="./auth/auth.js"></script>
+    <title>Page Administrateur</title>
+
 </head>
 
 <body>
-    <header class="header">
-        <img src="Image/logo.jpg.png" alt="Logo de Rhapsodie CRA" class="logo">
-    </header>
-
-    <main>
-        <h1>Espace de Connexion des Responsables</h1>
-        <div class="form">
-            <div class="form-group">
-                <label for="email">Adresse Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="password">Mot de passe:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-
-            <input type="submit" onclick="login()" value="Connexion">
-        </div>
-
-        <nav class="footer-links">
-            <a href="Motdepasseoubliés.html">Mot de passe oublié?</a>
-            <a href="Créeruncompte.html">Créer un compte</a>
-        </nav>
-    </main>
+    <div class="logo-container">
+        <img src="Image/logo.jpg.png" alt="Rhapsodie" id="logo">
+    </div>
+    <br><br>
+    <h2>Tableau de Bord Administrateur</h2>
+    <br><br>
+    <table>
+        <thead>
+            <tr>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Site d'intervention</th>
+                <th>Validation du Responsable</th>
+                <th>C.R.A à télécharger</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div class="CGV">
+        <a href="politiquedeconfidentialite.html" class="Politique de confidentialité">Politique de confidentialité</a>
+        <a href="conditiondutilisation.html" class="Condition d'utilisation">Condition d'utilisation</a>
+        <a href="contactez-nous.html" class="contactez-nous">Contactez-nous</a>
+    </div>
 
     <script src="AEP.js"></script>
 </body>
