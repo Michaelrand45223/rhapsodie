@@ -82,15 +82,28 @@ input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-/* Style pour les liens */
+
+/* Style de base pour les liens */
 .footer-links a {
     display: inline-block;
     margin: 10px 0;
     color: #007bff;
-    margin-left: 300px;
     text-decoration: none;
 }
 
-.footer-links a:hover {
-    text-decoration: underline;
+/* Appliquer des styles différents pour les écrans de petite taille (par exemple, mobile) */
+@media screen and (max-width: 768px) {
+    .footer-links a {
+        margin-left: 120px;
+        display: inline-flex;
+        /* Ajustez la marge gauche pour les petits écrans */
+    }
+}
+
+/* Appliquer des styles différents pour les écrans de grande taille (par exemple, ordinateurs de bureau) */
+@media screen and (min-width: 769px) {
+    .footer-links a {
+        margin-left: 300px;
+        /* Ajustez la marge gauche pour les grands écrans */
+    }
 }
