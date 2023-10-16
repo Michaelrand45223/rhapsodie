@@ -1,48 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Choisir le Site d'Intervention</title>
-    <link rel="stylesheet" type="text/css" href="Responsable.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsable</title>
+    <link rel="stylesheet" href="responsable.css">
 </head>
+<header>
+    <div class="logo-container">
+        <img src="../Image/logo.jpg.png" alt="Rhapsodie" id="logo">
+
+    </div>
+    <h1>Espace Responsable</h1>
+    <button id="logout-button">Déconnexion</button>
+</header>
 
 <body>
-    <header>
-        <h1>Choisissez le site où vous intervenez</h1>
-        <img id="logo" src="Image/logo.jpg.png" alt="Logo">
-    </header>
-    <main>
-        <div class="company" onclick="navigate('AEP')">
-            AEP
-        </div>
-        <div class="company" onclick="navigate('BNP_PARISBAS')">
-            BNP PARISBAS
-        </div>
-        <div class="company" onclick="navigate('SWISSLIFE')">
-            SWISSLIFE
-        </div>
-        <div class="company" onclick="navigate('MGP')">
-            MGP
-        </div>
-        <div class="company" onclick="navigate('NAXITIS')">
-            NAXITIS
-        </div>
-        <div class="company" onclick="navigate('CONNECT')">
-            CONNECT
-        </div>
-        <div class="company" onclick="navigate('CACIB')">
-            CACIB
-        </div>
-        <div class="company" onclick="navigate('SOCIETE_GENERALE')">
-            SOCIETE GENERALE
-        </div>
-    </main>
-    <div class="politiqueetcondition"><a href="Conditiondutilisation.html">CONDITION D'UTILISATION</a>
-        <a href="Politiquedeconfidentialite.html">POLITIQUE DE CONFIDENTIALITE</a>
-        <a href="Contactez-nous.html">Contactez-Nous</a>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">Gestion des Salariés</a>
+            </li>
+            <li>
+                <a href="#">Création des C.R.A</a>
+            </li>
+            <li>
+                <a href="#">Gérer mon compte</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="CGV">
+        <a href="politiquedeconfidentialite.html" class="Politique de confidentialité">Politique de confidentialité</a>
+        <a href="conditiondutilisation.html" class="Condition d'utilisation">Condition d'utilisation</a>
+        <a href="contactez-nous.html" class="contactez-nous">Contactez-nous</a>
     </div>
-
 </body>
-<script src="Responsable.js"></script>
 
 </html>
