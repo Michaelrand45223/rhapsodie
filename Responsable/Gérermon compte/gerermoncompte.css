@@ -1,0 +1,87 @@
+Body {
+    background-color: rgb(253, 182, 168);
+}
+
+/* style titre */
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #000000;
+    color: #fff;
+}
+
+/* Position de boutton logout dans le coin */
+#logout-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: rgb(248, 247, 245);
+    border: 2px solid #f8a304;
+    border-radius: 35px;
+    color: #0b0b0b;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+}
+
+#logout-button:hover {
+    text-decoration: underline;
+}
+
+
+/* style pour les CGV */
+.CGV {
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+.CGV a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.CGV a:hover {
+    color: #0099cc;
+}
+
+/* style pour les nav */
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    border: 2px solid #67adf8;
+    border-radius: 20px;
+    list-style-type: none;
+    background-color: rgb(174, 206, 244);
+    display: inline-block;
+    width: 350px;
+    font-size: 24px;
+
+}
+
+
+
+/* suppression liste (point sur nav ul) */
+nav ul {
+    /* Supprime les puces de la liste */
+    list-style-type: none;
+    /* mettre de bas en haut ok */
+    flex-direction: column;
+    padding: 0;
+    margin-top: 100px;
+
+}
+
+nav li {
+    margin-bottom: 12px;
+
+}
+
+nav {
+    text-align: center;
+}
