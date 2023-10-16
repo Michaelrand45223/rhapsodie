@@ -66,7 +66,7 @@ function signIn(email, password) {
                         } else if (userRole === "Administrateur") {
                             window.location.href = "administrateur.html";
                         } else if (userRole === "Responsable") {
-                            window.location.href = "../Responsable/Responsable CRA/responsable.html";
+                            window.location.href = "../Responsable/Responsablecra/responsable.html";
                         } else {
                             console.error("Rôle non reconnu: ", userRole);
                         }
