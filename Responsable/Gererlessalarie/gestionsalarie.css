@@ -1,0 +1,131 @@
+body {
+    background-color: rgb(250, 176, 163);
+}
+
+/* Style pour la barre de recherche */
+label {
+    display: block;
+    font:
+        1rem 'Fira Sans',
+        sans-serif;
+
+}
+
+input,
+label {
+    margin: 15px;
+
+}
+
+input {
+    background-color: blanchedalmond;
+    border: 2px solid rgb(253, 252, 252);
+    border-radius: 5px;
+    width: 60%;
+
+
+}
+
+/* Couleur à l'intérieur de placeholder */
+input::placeholder {
+    color: rgb(10, 10, 10);
+}
+
+/* Position de boutton logout dans le coin */
+#logout-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: rgb(248, 247, 245);
+    border: 2px solid #f8a304;
+    border-radius: 35px;
+    color: #0b0b0b;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+}
+
+#logout-button:hover {
+    text-decoration: underline;
+}
+
+/* style titre */
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #000000;
+    color: #fff;
+}
+
+/* style pour les CGV */
+.CGV {
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #090909;
+    color: #fff;
+}
+
+.CGV a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.CGV a:hover {
+    color: #0099cc;
+}
+
+/* Quelques styles pour rendre le tableau plus lisible */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #AEC6CF;
+}
+
+.responsive-table {
+    overflow-x: auto;
+    /* Ajoute une barre de défilement horizontale si nécessaire */
+    display: block;
+    /* Convertit le conteneur en bloc pour la largeur complète */
+}
+
+/* Media query pour les écrans plus petits */
+@media screen and (max-width: 768px) {
+
+    table,
+    th,
+    td {
+        width: 100%;
+        display: block;
+    }
+
+    th,
+    td {
+        /* Ajustez le padding ou la marge si nécessaire */
+        padding: 5px;
+    }
+
+    thead {
+        /* Nous masquons l'en-tête sur les petits écrans */
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 0.625rem;
+        display: flex;
+        justify-content: space-between;
+    }
+}

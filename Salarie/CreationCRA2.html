@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+    <!-- script pour la sugnature -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
+
+    <link rel="stylesheet" href="CreationCRA.css">
+    <title>Document</title>
+</head>
+<header>
+    <h1>RHAPSODIE C.R.A</h1>
+    <img src="Image/logo.jpg.png" alt="logo">
+</header>
+
+<body>
+    <h1>Compte Rendu d'Activité</h1>
+    <!-- ... -->
+<form id="activity-form">
+    <label for="names">Nom(s):</label>
+    <input type="text" id="lastName" required> <!-- Updated ID -->
+
+    <label for="first-names">Prénom(s):</label>
+    <input type="text" id="firstName" required> <!-- Updated ID -->
+
+    <label for="responsibles">Responsable(s):</label>
+    <input type="text" id="userRole" required> <!-- Updated ID -->
+
+    <label for="site">Site d'intervention:</label>
+    <input type="text" id="userSite" required> <!-- Updated ID -->
+<!-- ... -->
+
+<!-- Script pour récupérer et afficher les informations de l'utilisateur -->
+   <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
+
+        <script>
+        // Pour récuperer les informations
+        const firebaseConfig = {
+            apiKey: "AIzaSyD5XUFZdpnniSJh7rfo8nJ-C6RopWTsNF0",
+    authDomain: "rhapsodie-25374.firebaseapp.com",
+    projectId: "rhapsodie-25374",
+    storageBucket: "rhapsodie-25374.appspot.com",
+    messagingSenderId: "339820898811",
+    appId: "1:339820898811:web:ad07ee153fbb5c5fe2435e"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+        // Fonction pour récupérer les informations de l'utilisateur actuellement connecté
+        auth.onAuthStateChanged((user) => {
+            if (user) {
+                // Utilisateur connecté
+                const email = user.email;
+
+                // Récupérez les informations de l'utilisateur à partir de la base de données
+                db.collection("users")
+                    .where("email", "==", email)
+                    .get()
+                    .then((querySnapshot) => {
+                        querySnapshot.forEach((doc) => {
+                            const data = doc.data();
+                            document.getElementById("firstName").textContent = data.firstname;
+                            document.getElementById("lastName").textContent = data.name;
+                            document.getElementById("userRole").textContent = data.role;
+                            document.getElementById("userSite").textContent = data.site;
+                        });
+                    })
+                    .catch((error) => {
+                        console.error("Erreur lors de la récupération des informations de l'utilisateur:", error);
+                    });
+            } else {
+                // Utilisateur non connecté, redirigez-le vers la page de connexion
+                window.location.href = "connexion.html"; // 
+            }
+        });
+</script>
+        <label for="site">Site d'intervention:</label>
+        <select id="site" required>
+        </select>
+
+        <label for="month">Mois:</label>
+        <select id="month" required>
+            <option value="">Sélectionnez un mois</option>
+            <option value="1">Janvier</option>
+            <option value="2">Février</option>
+            <option value="3">Mars</option>
+            <option value="4">Avril</option>
+            <option value="5">Mai</option>
+            <option value="6">Juin</option>
+            <option value="7">Juillet</option>
+            <option value="8">Août</option>
+            <option value="9">Septembre</option>
+            <option value="10">Octobre</option>
+            <option value="11">Novembre</option>
+            <option value="12">Décembre</option>
+        </select>
+
+        <label for="year">Année:</label>
+        <select id="year" required>
+            <option value="">Sélectionnez une année</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+        </select>
+
+        <input type="submit" value="Générer le compte rendu">
+    </form>
+
+    <table id="report-table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Jours travaillés</th>
+                <th>Motif d'absences</th>
+                <th>Heures supplémentaires</th>
+                <th>Commentaires</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <div id="totals">
+        <p>Total jours travaillés: <span id="total-worked-days">0</span></p>
+        <p>Total absences: <span id="total-absences">0</span></p>
+        <p>Total heures supplémentaires: <span id="total-overtimes">0</span></p>
+    </div>
+
+    <!-- signature -->
+    <div>
+        <canvas id="signature-pad" class="signature-pad" width=400 height=200></canvas>
+    </div>
+    <button id="save">Enregistrer</button>
+    <button id="clear">Effacer</button>
+
+    <button id="download">Télécharger le PDF</button>
+
+
+    <script src="CreationCRA.js"></script>
+</body>
+
+</html>

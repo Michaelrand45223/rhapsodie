@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr"> <!-- Langue du site -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Encodage -->
+    <title>Créer un compte</title>
+    <link rel="stylesheet" href="Créeruncompte.css">
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
+    <script src="./auth/auth.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Créer un compte pour les salariés</h1>
+    </header>
+
+    <main> <!-- Section principale -->
+        <div>
+
+            <!-- Prénom -->
+            <label for="prenom">Prénom:</label>
+            <input type="text" id="prenom" name="prenom" required>
+
+            <!-- Nom -->
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <!-- Nom du responsable -->
+            <label for="responsable">Nom du responsable:</label>
+            <input type="text" id="responsable" name="responsable" required>
+
+            <!-- Site d'intervention -->
+            <label for="site">Site d'intervention:</label>
+            <input type="text" id="site" name="site" required>
+
+            <!-- Adresse Email -->
+            <label for="email">Adresse Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Mot de passe -->
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" onClick="inscription()" value="Créer un compte">
+        </div>
+    </main>
+
+    <footer>
+        <a href="salarie-connexion.html">J'ai déjà un compte</a>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="Créeruncompte.js"></script>
+</body>
+
+</html>
