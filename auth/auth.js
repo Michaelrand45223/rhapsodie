@@ -62,7 +62,7 @@ function signIn(email, password) {
                         const userRole = doc.data().role;
                         // Rediriger en fonction du rôle
                         if (userRole === "Salarié") {
-                            window.location.href = "Salaire/Salarié.html";
+                            window.location.href = "../Salarie/Salarié.html";
                         } else if (userRole === "Administrateur") {
                             window.location.href = "administrateur.html";
                         } else if (userRole === "Responsable") {
