@@ -1,5 +1,14 @@
 body {
-    background-color: #f6c2c2;
+    background-color: rgb(250, 176, 163);
+}
+
+/* style titre */
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #000000;
+    color: #fff;
 }
 
 label {
@@ -34,4 +43,25 @@ th {
 
 #capture-button {
     margin-top: 20px;
+}
+
+
+/* style pour les CGV */
+.CGV {
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+.CGV a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.CGV a:hover {
+    color: #0099cc;
 }
