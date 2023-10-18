@@ -84,15 +84,17 @@ function signIn(email, password) {
             console.error("Erreur de connexion:", errorMessage);
         });
 }
-
-// Gestion de la déconnexion de l'utilisateur
+// /Gestion de deconnexion
 function signOut() {
     auth.signOut().then(() => {
         // L'utilisateur est déconnecté avec succès
+        window.location.href = "../Connexion/connexion.html"; // Redirigez vers la page de connexion ou la page principale
     }).catch((error) => {
         // Gestion des erreurs de déconnexion
+        alert("Erreur lors de la déconnexion.");
     });
 }
+
 
 const inscription = (e) => {
     console.log("connexion");
@@ -150,3 +152,14 @@ const login = (e) => {
         console.log({ e })
     }
 };
+
+// appelle la fonction signout
+document.addEventListener("DOMContentLoaded", function () {
+    const signOutButton = document.getElementById("signOutButton");
+    if (signOutButton) {
+        signOutButton.addEventListener("click", function () {
+            signOut();  // Appellez votre fonction signOut()
+        });
+    }
+});
+//////////-------------------//////////////////////////////
